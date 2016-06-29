@@ -17,8 +17,6 @@ public class MaxPairwiseProduct {
 
     public static void main(String[] args) {
         FastScanner scanner = new FastScanner(System.in);
-        System.out.println("Long max: " + Long.MAX_VALUE);
-        System.out.println("Enter input...");
         int n = scanner.nextInt();
         int[] numbers = new int[n];
         for (int i = 0; i < n; i++) {
