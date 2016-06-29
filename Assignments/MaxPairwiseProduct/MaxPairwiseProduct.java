@@ -16,24 +16,25 @@ public class MaxPairwiseProduct {
     }
 
     static long getMaxPairwiseProductFast(int[] numbers) {
-        long max1 = 0;
-        long max2 = 0;
+        int maxIndex1 = -1;
+        int maxIndex2 = -1;
 
-        // find max number in list
+        // find index of max number in list
         for (int i = 0; i < numbers.length; ++i) {
-            if (numbers[i] > max1) {
-                max1 = numbers[i];
+            if (maxIndex1 == -1 ||
+                    numbers[i] > numbers[maxIndex1]) {
+                maxIndex1 = i;
             }
         }
 
-        // find next highest number in list
+        // find index of next highest number in list
         for (int j = 0; j < numbers.length; ++j) {
-            if (numbers[j] > max2 && numbers[j] != max1) {
-                max2 = numbers[j];
+            if ((maxIndex2 == -1 || numbers[j] > numbers[maxIndex2]) && (j != maxIndex1)) {
+                maxIndex2 = j;
             }
         }
 
-        return max1 * max2;
+        return ((long) (numbers[maxIndex1])) * numbers[maxIndex2];
     }
 
     public static void main(String[] args) {
