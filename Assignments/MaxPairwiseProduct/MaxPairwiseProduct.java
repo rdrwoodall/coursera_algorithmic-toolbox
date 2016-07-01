@@ -6,7 +6,7 @@ public class MaxPairwiseProduct {
     static final int MIN_N_VALUE = 2;
     static final int MAX_N_ITEM_VALUE = 100000;
     static final int MIN_N_ITEM_VALUE = 0;
-    static final double STRESS_TEST_EXECUTION_MAX = 5.0;
+    static final double STRESS_TEST_EXECUTION_MAX = 10.0;
 
     static long getMaxPairwiseProduct(int[] numbers) {
         long result = 0;
@@ -41,8 +41,7 @@ public class MaxPairwiseProduct {
         }
 
         return ((long) (numbers[maxIndex1])) * numbers[maxIndex2];
-<<<<<<< HEAD
-=======
+
     }
 
     static void execute() {
@@ -90,7 +89,6 @@ public class MaxPairwiseProduct {
                 System.exit(1);
             }
         }
->>>>>>> testing
     }
 
     public static void main(String[] args) {
